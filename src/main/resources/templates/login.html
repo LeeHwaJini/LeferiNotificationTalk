@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" class="fixed has-top-menu">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="/resources/css/styles.css" rel="stylesheet"/>
+    <link href="/resources/css/common.css" rel="stylesheet"/>
+    <link href="/resources/css/login.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="wrap">
+    <main class="w-100 h-100">
+        <div class="container login-container">
+            <div class="row justify-content-center align-items-center w-100 h-100">
+                <div class="col-lg-5">
+                    <div class="card shadow-lg border-0 rounded-lg">
+                        <div class="card-header">
+                            <img src="/resources/images/img_logo.png" alt="" class="d-block mb-4 mx-auto h-50px">
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-floating mb-3">
+                                    <input class="input-text" id="inputEmail" type="email"
+                                           placeholder="아이디"/>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input class="input-text" id="inputPassword" type="password"
+                                           placeholder="비밀번호"/>
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                    <a class="btn btn-primary w-100" href="index.html">로그인</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div th:replace="~{common/includes/commonFooter.html :: fragment-footer}"></div>
+        </div>
+    </main>
+
+    <!-- 비밀번호 변경 팝업 -->
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered pwd-change-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">비밀번호 변경</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="field">
+                        <label for="pwd">비밀번호</label>
+                        <input id="pwd" type="text" placeholder="비밀번호" class="input-text">
+                    </div>
+                    <div class="field">
+                        <label for="pwdConfirm">비밀번호 확인</label>
+                        <input id="pwdConfirm" type="text" placeholder="비밀번호 확인" class="input-text">
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary">변경하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //비밀번호 변경 팝업 -->
+</div>
+
+<script src="/resources/js/pages/login.js"></script>
+<script>
+
+</script>
+</body>
+</html>

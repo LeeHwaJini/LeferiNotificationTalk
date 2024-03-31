@@ -1,0 +1,88 @@
+<head th:replace="common/includes/commonHead.html :: fragment-header">
+
+</head>
+<body>
+
+<nav th:replace="common/includes/commonHeader.html"></nav>
+
+<div id="layoutSidenav">
+    <div  th:replace="common/includes/commonSidemenu.html"></div>
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">관리자 계정 상세</h1>
+
+                <form action="">
+                    <div class="search-form-area">
+                        <div class="field">
+                            <label>관리자ID</label>
+                            <div>
+                                <input type="text" name="" class="input-text">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>관리자명</label>
+                            <div>
+                                <input type="text" name="" class="input-text">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>비밀번호</label>
+                            <div>
+                                <input type="password" name="" class="input-text">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>비밀번호 확인
+                            </label>
+                            <div>
+                                <input type="password" name="" class="input-text">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>유형</label>
+                            <div class="search-radio-btn-area">
+                                <div>
+                                    <input id="topAdmin" type="radio" name="category" class="">
+                                    <label for="topAdmin">최고 관리자</label>
+                                </div>
+                                <div>
+                                    <input id="admin" type="radio" name="category" class="">
+                                    <label for="admin">일반 관리자</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label>상태</label>
+                            <div class="search-radio-btn-area">
+                                <div>
+                                    <input id="normal" type="radio" name="state" class="">
+                                    <label for="normal">정상</label>
+                                </div>
+                                <div>
+                                    <input id="lock" type="radio" name="state" class="">
+                                    <label for="lock">잠금</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <div class="btn-field center">
+                            <button class="btn btn-primary cancel-btn">취소</button>
+                            <button class="btn btn-primary">확인</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </main>
+        <div th:replace="~{common/includes/commonFooter.html :: fragment-footer}"></div>
+    </div>
+</div>
+
+
+<script src="/resources/js/pages/admin/regist.js"></script>
+
+</body>
+</html>

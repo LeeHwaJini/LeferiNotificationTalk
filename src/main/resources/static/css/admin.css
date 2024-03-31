@@ -1,0 +1,241 @@
+.menu-logo {
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+.table> :not(caption)>*>*, .datatable-table> :not(caption)>*>* {
+    padding: 0;
+}
+.table.type01 >table {
+    width: 100%;
+    border-radius: 10px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #ddd;
+    text-align: center;
+}
+.table.type01 > table > thead th {
+    padding: 1rem;
+    height: 46px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--bs-body-color);
+    text-wrap: nowrap;
+}
+.table.type01 >table tbody td {
+    padding: 0.75rem;
+    border-top: solid 1px #ddd;
+    font-size: 0.875rem;
+    text-wrap: nowrap;
+}
+.table.type01 >table tbody td > button {
+    width: 56px;
+    padding: 0.25rem;
+    font-size: 0.7rem;
+}
+
+.table.type01 > table tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+.table.type01 > table tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.search-form-area {
+    margin: 3rem 0;
+    padding: 1.875rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.search-form-area .field {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.search-form-area .field + .field {
+    margin-top: 1.875rem;
+}
+.search-form-area .field>label {
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+.search-form-area .field > .search-radio-btn-area {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.search-form-area .btn-field {
+    text-align: right;
+    margin-top: 2rem;
+}
+.search-form-area .btn-field.center {
+    text-align: center;
+}
+.search-form-area .btn-field >button {
+    width: 165px;
+}
+.search-form-area .btn-field >button + button {
+    margin-left: 0.5rem;
+}
+.table-top-btn-area {
+    margin-bottom: 1.5rem;
+    text-align: right;
+}
+.table-top-btn-area > button {
+    padding: 0.55rem 1.5rem;
+    border: 1px solid #333;
+    background: #fff;
+    color: var(--bs-body-color);
+    border-radius: 30px;
+    font-size: 0.875rem;
+}
+.table-top-btn-area > button+button {
+    margin-left: 0.5rem;
+}
+.paging.type01 {
+    margin-top: 1.875rem;
+    margin-bottom: 4rem;
+}
+.paging.type01,
+.paging.type01 > ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.paging.type01 > ul>li {
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.paging.type01 > ul>li.active {
+    background: #333;
+    color: #fff;
+    font-width: bold;
+}
+.paging.type01 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border: solid 1px #eee;
+    border-radius: 5px;
+    background-color: #fff;
+    font-width: bold;
+}
+.paging.type01 a > svg {
+    padding: 0;
+    color: var(--bs-body-color);
+}
+.paging.type01 .paging-first {
+    transform: rotate(90deg);
+}
+.paging.type01 .paging-last {
+    transform: rotate(-90deg);
+}
+
+.container-fluid > h1 {
+    margin-top: 2rem !important;
+}
+.cancel-btn {
+    border: 1px solid #333;
+    background: #fff;
+    color:var(--bs-body-color);
+}
+
+.container-fluid {
+    padding: 0 2.5rem !important;
+}
+
+.login-info-area >button {
+    margin-left: 1rem;
+    padding: 0.5rem;
+    width: 100px;
+}
+
+
+.table.type01 {
+    overflow-x: auto;
+    padding: 1px;
+}
+
+/* 스크롤바의 폭 너비 */
+.table.type01::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.table.type01::-webkit-scrollbar-horizontal {
+    height: 8px;
+}
+
+.table.type01::-webkit-scrollbar-thumb-horizontal {
+    background: #D8D9DC;
+    border-radius: 10px;
+}
+
+.table.type01::-webkit-scrollbar-track-horizontal {
+    background: #f6f6f6;
+}
+.table.type01::-webkit-scrollbar-thumb {
+    background: #D8D9DC;
+    border-radius: 10px;
+}
+
+.table.type01::-webkit-scrollbar-track {
+    background: #f6f6f6;
+}
+.table.type01 tbody tr {
+    position: relative;
+}
+.hover-content {
+    display: none;
+    position: absolute;
+    top: -35px;
+    right: 0;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 1rem;
+    background: #fff;
+    max-width: 182PX;
+    test-wrap: wrap;
+    font-size: 0.75rem;
+}
+.hover {
+    cursor: pointer;
+}
+.hover:hover .hover-content {
+    display: block;
+}
+
+.alert-modal {
+    max-width: 440px;
+}
+
+.alert-modal .modal-content {
+    padding: 2.5rem;
+}
+.alert-modal .modal-content .modal-body {
+    padding: 0;
+}
+.alert-modal .modal-content .modal-body .field {
+    font-weight: bold;
+}
+.alert-modal .modal-content .modal-footer{
+    gap: 1rem;
+    padding: 0;
+    padding-top: 3rem;
+}
+.alert-modal .modal-content .modal-footer button {
+    width: 100px;
+    padding: 0.5rem 0.75rem;
+}

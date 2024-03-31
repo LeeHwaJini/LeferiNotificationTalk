@@ -1,0 +1,112 @@
+<head th:replace="common/includes/commonHead.html :: fragment-header">
+
+</head>
+<body>
+
+<nav th:replace="common/includes/commonHeader.html"></nav>
+
+<div id="layoutSidenav">
+    <div  th:replace="common/includes/commonSidemenu.html"></div>
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">관리자 리스트</h1>
+
+                <form action="">
+                    <div class="search-form-area">
+                        <div class="field">
+                            <label>관리자 유형</label>
+                            <div class="search-radio-btn-area">
+                                <div>
+                                    <input id="all" type="radio" name="adminCategory">
+                                    <label for="all">전체</label>
+                                </div>
+                                <div>
+                                    <input id="topAdmin" type="radio" name="adminCategory">
+                                    <label for="topAdmin">최고 관리자</label>
+                                </div>
+                                <div>
+                                    <input id="admin" type="radio" name="adminCategory">
+                                    <label for="admin">일반 관리자</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="field">
+                            <label for="search">검색어</label>
+                            <input id="search" type="text" class="input-text" placeholder="검색어를 입력해주세요">
+                        </div>
+                        <div class="btn-field">
+                            <button class="btn btn-primary">검색</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="table-top-btn-area">
+                    <button class="btn">관리자 등록</button>
+                </div>
+
+                <!-- 리스트 -->
+                <div class="table type01">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%">
+                            <col style="width: 15%">
+                            <col style="width: 25%">
+                            <col style="width: 15%">
+                            <col style="width: 15%">
+                            <col style="width: 25%">
+                        </colgroup>
+
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>관리자 ID</th>
+                                <th>관리자명</th>
+                                <th>유형</th>
+                                <th>등록일</th>
+                                <th>-</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>admin</td>
+                                <td>최고관리자</td>
+                                <td>최고</td>
+                                <td>2024.03.27 12:00</td>
+                                <td>
+                                    <button class="btn type01 edit-btn">수정</button>
+                                    <button class="btn type02 del-btn">삭제</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //리스트 -->
+
+                <!-- 페이지네이션 -->
+                <div class="paging type01">
+                    <a href="" class="paging-first"><i class="fas fa-angle-down"></i></a>
+                    <ul>
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                    <a href="" class="paging-last"><i class="fas fa-angle-down"></i></a>
+                </div>
+                <!-- //페이지네이션 -->
+
+            </div>
+        </main>
+        <div th:replace="~{common/includes/commonFooter.html :: fragment-footer}"></div>
+    </div>
+</div>
+
+
+<script src="/resources/js/pages/admin/list.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" class="fixed has-top-menu">
+<head>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<div class="admin">
+	<div class="inner">
+		
+		<div class="contents white_back">
+			<div class="login">
+				<div class="logo">
+					<img th.src="@{/resource/img/adm/img-bi-02-bk.png}"
+				      srcset="/resources/img/adm/img-bi-02-bk@2x.png 2x,
+				              /resources/img/adm/img-bi-02-bk@3x.png 3x" >
+				    <span class="divider"></span>
+				    <div class="adm_word">Admin</div>
+				</div>
+				<div class="input">
+					<input type="text" name="mbrId" placeholder="아이디">
+					<input type="password" name="mbrPwd" placeholder="패스워드">
+				</div>
+				<div class="checkbox ikc_wrap">
+					<input id="id_keep_check" type="checkbox">
+					<label for="id_keep_check">아이디 기억하기</label>
+				</div>
+				<div class="button">
+					<input type="submit" class="loginBtn" value="로그인">
+					<input type="button" class="apiTestBtn" value="api테스트버튼">
+				</div>
+		
+			</div>
+		</div>
+	</div>
+</div>
+<div th:replace="~{common/includes/commonFooter.html :: fragment-footer}"></div>
+<script src="/resources/js/pages/login2.js"></script>
+</body>
+</html>

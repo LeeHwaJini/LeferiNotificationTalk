@@ -1,0 +1,206 @@
+<head th:replace="common/includes/commonHead.html :: fragment-header">
+
+</head>
+<body>
+
+<nav th:replace="common/includes/commonHeader.html"></nav>
+
+<div id="layoutSidenav">
+    <div  th:replace="common/includes/commonSidemenu.html"></div>
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">기회 리스트</h1>
+
+                <form action="">
+                    <div class="search-form-area">
+                        <div class="field">
+                            <label>상태 값 검색</label>
+                            <div class="search-radio-btn-area">
+                                <div>
+                                    <input id="all" type="radio" name="state">
+                                    <label for="all">전체</label>
+                                </div>
+                                <div>
+                                    <input id="request" type="radio" name="state">
+                                    <label for="request">요청</label>
+                                </div>
+                                <div>
+                                    <input id="completed" type="radio" name="state">
+                                    <label for="completed">발송완료</label>
+                                </div>
+                                <div>
+                                    <input id="companion" type="radio" name="state">
+                                    <label for="companion">반려</label>
+                                </div>
+                                <div>
+                                    <input id="agreement" type="radio" name="state">
+                                    <label for="agreement">동의</label>
+                                </div>
+                                <div>
+                                    <input id="noAgreement" type="radio" name="state">
+                                    <label for="noAgreement">미동의</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="field">
+                            <label for="search">검색어</label>
+                            <input id="search" type="text" class="input-text" placeholder="검색어를 입력해주세요">
+                        </div>
+                        <div class="btn-field">
+                            <button class="btn btn-primary">검색</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="table-top-btn-area">
+                    <button class="btn">조회 기간</button>
+                    <button class="btn">기회 불러오기</button>
+                </div>
+
+                <!-- 리스트 -->
+                <div class="table type01">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%">
+                            <col style="width: 10%">
+                            <col style="width: 10%">
+                            <col style="width: 10%">
+                            <col style="width: 10%">
+                        </colgroup>
+
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>기회 작성일</th>
+                                <th>기회 번호</th>
+                                <th>기회 이름</th>
+                                <th>크리에이터명</th>
+                                <th>브랜드명</th>
+                                <th>판매 상품명</th>
+                                <th>작성자명</th>
+                                <th>작성자 이메일</th>
+                                <th>예상일정</th>
+                                <th>첨부파일</th>
+                                <th>협의 알림톡</th>
+                                <th>협의 상태</th>
+                                <th>계약 알림톡</th>
+                                <th>계약 상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2024.01.04</td>
+                                <td>SO#2401-1231</td>
+                                <td>㈜기회이름</td>
+                                <td>폼폼푸린</td>
+                                <td>브랜드</td>
+                                <td>PPL</td>
+                                <td>김희연</td>
+                                <td>h123**@leferi.com</td>
+                                <td>2024.01.04</td>
+                                <td>확인서.pdf</td>
+                                <td><button class="btn type01">승인요청</button></td>
+                                <td>승인요청</td>
+                                <td><button class="btn type01 disabled">승인요청</button></td>
+                                <td class="hover">
+                                    승인요청
+                                    <div class="hover-content">
+                                        사유내용은 ~~~입니다.
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2024.01.04</td>
+                                <td>SO#2401-1231</td>
+                                <td>㈜기회이름</td>
+                                <td>폼폼푸린</td>
+                                <td>브랜드</td>
+                                <td>PPL</td>
+                                <td>김희연</td>
+                                <td>h123**@leferi.com</td>
+                                <td>2024.01.04</td>
+                                <td>확인서.pdf</td>
+                                <td>
+                                    <button class="btn btn-primary">발송</button>
+                                    <button class="btn type02">반려</button>
+                                </td>
+                                <td>발송완료</td>
+                                <td>
+                                    <button class="btn btn-primary">발송</button>
+                                    <button class="btn type02">반려</button></td>
+                                <td>발송완료</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //리스트 -->
+                <!-- 페이지네이션 -->
+
+                <div class="paging type01">
+                    <a href="" class="paging-first"><i class="fas fa-angle-down"></i></a>
+                    <ul>
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                    <a href="" class="paging-last"><i class="fas fa-angle-down"></i></a>
+                </div>
+                <!-- //페이지네이션 -->
+            </div>
+        </main>
+
+        <!-- 사유입력 팝업 -->
+        <div  class="modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered pwd-change-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">사유입력</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="field">
+                            <textarea id="" class="textarea-text" name="">
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-primary">입력완료</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //사유입력 팝업 -->
+
+        <!-- 알림 팝업 -->
+        <div class="modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered alert-modal">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="field">
+                            해당 크리에이터에게 알림톡을 발송하시겠습니까?
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn type04 popup-close">아니오</button>
+                        <button type="button" class="btn btn-primary">예</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //알림 팝업 -->
+
+        <div th:replace="~{common/includes/commonFooter.html :: fragment-footer}"></div>
+    </div>
+</div>
+
+
+<script src="/resources/js/pages/notification/list.js"></script>
+
+</body>
+</html>
